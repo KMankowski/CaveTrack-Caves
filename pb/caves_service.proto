@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "github.com/KMankowski/CaveTrack-Cave/internal/pb";
+
+package pb;
+
+service CavesService {
+    rpc GetCaves (GetCavesRequest) returns (GetCavesResponse) {}
+}
+
+message GetCavesRequest {
+    repeated int32 cave_ids = 1;
+}
+
+message GetCavesResponse {
+    repeated Cave caves = 1;
+}
+
+message Cave {
+    string name = 1;
+    string comment = 2;
+    string description = 3;
+    LatLng location = 4;
+}
+
+message LatLng {
+    double latitude = 1;
+    double longitude = 2;
+}

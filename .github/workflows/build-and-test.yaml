@@ -1,4 +1,4 @@
-name: Build and Test Pull Requests
+name: Build and Test
 
 on:
   pull_request:
@@ -6,6 +6,9 @@ on:
       - opened
       - synchronize
       - reopened
+  push:
+    branches:
+      - main
 
 jobs:
   ci:

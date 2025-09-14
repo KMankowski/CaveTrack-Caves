@@ -35,5 +35,8 @@ go.work.sum
 #                CUSTOM                #
 ########################################
 
-# application binary
-/server
+server
+!server/
+importer
+!importer/
+/gpx/
